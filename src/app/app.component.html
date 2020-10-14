@@ -1,4 +1,25 @@
-<div class="wrapper">
+<div class="app-grid-container">
+  <header class="app-header">
+    <img src="./../assets/logo.png"/>
+  </header>
+  <nav class="app-nav">
+    <a class="button" routerLink="/grid1">Basic Grid</a>
+    <a class="button" routerLink="/grid2">Fractions</a>
+    <a class="button" routerLink="/grid3">Positioning Grid Items</a>
+    <a class="button" routerLink="/grid4">Grid with Named Lines</a>
+    <a class="button" routerLink="/grid5">Named Grids</a>
+    <a class="button" routerLink="/grid6">Responsive grid with Auto-fit and Minmax</a>
+  </nav>
+  <section class="app-section">
+    <router-outlet></router-outlet>
+  </section>
+  <footer class="app-footer">&copy;Copyright 2020</footer>
+</div>
+
+
+
+
+<!-- <div class="wrapper">
   <div class="grid-container1">
     <div><img src="./../assets/flowers/m3.jpeg" /></div>
     <div><img src="./../assets/flowers/b1.jpg" /></div>
@@ -30,4 +51,4 @@
   <a class="button" routerLink="/grid2">Grid2</a>
 </nav>
 <app-root></app-root>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->

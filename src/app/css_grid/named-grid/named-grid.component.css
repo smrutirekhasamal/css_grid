@@ -1,0 +1,33 @@
+.named-lines-grid-container > div {
+    color: #ffffff;
+    /* background-color: #928a8a; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.named-lines-grid-container {
+    height: 100%;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: [header-start] 200px [dashboard-start] 1fr [panel-start] 200px [header-end];
+    grid-template-rows: [header-start] 1fr [dashboard-start] 5fr [dashboard-end];
+}
+
+.masthead {
+    background-color: dodgerblue;
+    grid-column: header;
+}
+
+.left-menu {
+    background-color: darkseagreen;
+    grid-row: dashboard-start/dashboard-end;
+}
+.dashboard {
+    background-color: #ffd8a8;
+    grid-column: dashboard-start / panel-start;
+}
+
+.right-panel {
+    background-color: rgb(209, 154, 223);
+}

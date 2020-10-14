@@ -1,0 +1,20 @@
+.basic-grid-container>div:nth-child(1n) {
+    background-color: #db2443;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basic-grid-container>div:nth-child(2n) {
+    background-color: #abbbda;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basic-grid-container {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 100px 100px;
+    grid-gap: 2px;
+}

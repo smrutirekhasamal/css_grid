@@ -1,3 +1,5 @@
+
+
 .named-lines-grid-container > div {
     color: #ffffff;
     /* background-color: #928a8a; */
@@ -10,27 +12,25 @@
     height: 100%;
     display: grid;
     grid-gap: 2px;
-    grid-template-areas: 
-    "h h h h h h h h h h h p"
-    "m d d d d d d d d d d p"
-    "m d d d d d d d d d d p"
+    grid-template-columns: [header-start] 100px [dashboard-start] 1fr [dashboard-end] 100px [panel-end];
+    grid-template-rows: [header-start] 50px [header-end] 1fr [dashboard-end];
 }
 
 .masthead {
     background-color: dodgerblue;
-    grid-area: h;
+    grid-column: header-start / panel-end;
 }
 
 .left-menu {
     background-color: darkseagreen;
-    grid-area: m;
+    grid-row: header-end/dashboard-end;
 }
 .dashboard {
     background-color: #ffd8a8;
-    grid-area: d;
+    grid-column: dashboard-start / dashboard-end;
 }
 
 .right-panel {
     background-color: rgb(209, 154, 223);
-    grid-area: p;
+    grid-column: dashboard-end/panel-end;
 }

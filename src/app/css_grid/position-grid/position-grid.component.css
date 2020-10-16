@@ -8,29 +8,31 @@
 
 .position-grid-container {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(4, 100px);
+    grid-template-columns: repeat(12, 1fr); 
+    grid-template-rows: 100px 100px 100px;
     grid-gap: 1px;
 }
 
+/* Grid item can be positioned irrespective their order in source. Which is called as 
+* Source order Independence 
+* Hence needs to be careful while changing the position of items using CSS grid
+* for the Accesibility issues. To see how the element positioned are changes just 
+* alter the class names of elements and notice the contents inside.   
+*/
 .one {
-    grid-column-start: 2;
-    grid-column-end: -2;
+    grid-column-start: 1;
+    grid-column-end: 13;
 }
-
 .three {
     grid-row-start: 2;
-    grid-row-end: -2;
+    grid-row-end: 4;
 }
-
-.two {
-    grid-area: 2/2/-2/-2
-}
-
-.five {
-    grid-row: 2/-2;
-}
-
 .four {
-    grid-column: 2 / span 10;
+    grid-area: 2/2/4/12
+}
+.two{
+    grid-row: 2/ span 2;
+}
+.five {
+    grid-column: 1/-1;
 }
